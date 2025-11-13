@@ -1,45 +1,58 @@
-/* Header styling */
+/* Header.css */
+
+/* Header container */
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 20px;
-  background-color: #1e90ff;
-  color: white;
+  padding: 15px 30px;
+  background-color: #007bff; /* Keep background blue */
+  color: #000; /* Set default text color to black */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   flex-wrap: wrap;
 }
 
-.header h1 a {
-  color: white;
-  text-decoration: none;
+.header h1 {
+  margin: 0;
   font-size: 1.8rem;
+}
+
+.header h1 a {
+  text-decoration: none;
+  color: #000; /* Title in black */
+  font-weight: bold;
 }
 
 .header nav {
   display: flex;
-  gap: 15px;
+  gap: 20px;
 }
 
 .header nav a {
-  color: white;
   text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s;
+  color: #000; /* Links in black */
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
 .header nav a:hover {
-  color: #ffeb3b;
+  color: #ffd700; /* Keep hover color gold */
 }
 
-/* Responsive for smaller screens */
-@media (max-width: 600px) {
+/* Responsive design */
+@media (max-width: 768px) {
   .header {
     flex-direction: column;
     align-items: flex-start;
+    padding: 15px 20px;
   }
+
   .header nav {
     margin-top: 10px;
-    flex-direction: column;
-    gap: 8px;
+    gap: 15px;
+  }
+
+  .header h1 {
+    font-size: 1.5rem;
   }
 }
