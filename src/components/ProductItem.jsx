@@ -3,6 +3,8 @@ import { addToCart } from "../redux/cartSlice";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types"; // Import PropTypes
 
+
+
 // Component for single product
 const ProductItem = ({ product }) => {
   const dispatch = useDispatch();
