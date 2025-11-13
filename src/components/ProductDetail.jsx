@@ -3,6 +3,8 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../redux/cartSlice";
+import "./ProductDetail.css";
+
 
 // Component for product detail page
 const ProductDetail = () => {
@@ -32,7 +34,7 @@ const ProductDetail = () => {
 
   return (
     <div className="product-detail">
-      <img src={product.thumbnail} alt={product.title} />
+      <img src={product.thumbnail} alt={product.title} loading="lazy" />
       <h2>{product.title}</h2>
       <p>{product.description}</p>
       <p>${product.price}</p>
