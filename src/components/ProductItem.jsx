@@ -2,6 +2,7 @@ import { useDispatch } from "react-redux";
 import { addToCart } from "../redux/cartSlice";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types"; // Import PropTypes
+import "./ProductItem.css";
 
 
 
