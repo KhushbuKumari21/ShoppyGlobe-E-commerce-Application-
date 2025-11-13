@@ -1,6 +1,8 @@
 import { useDispatch } from "react-redux";
 import { removeFromCart, increaseQuantity, decreaseQuantity } from "../redux/cartSlice";
 import PropTypes from "prop-types"; // Import PropTypes
+import "./CartItem.css"; 
+
 
 // Component for single cart item
 const CartItem = ({ item }) => {
