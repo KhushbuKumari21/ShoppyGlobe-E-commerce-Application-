@@ -1,0 +1,88 @@
+/* Checkout page styling */
+.checkout {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.checkout h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #1e90ff;
+}
+
+.checkout form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.checkout form input {
+  padding: 10px 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.checkout form input:focus {
+  border-color: #1e90ff;
+}
+
+.checkout h3 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.checkout ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+
+.checkout ul li {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 1rem;
+}
+
+.checkout button {
+  padding: 12px 20px;
+  font-size: 1rem;
+  background-color: #1e90ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+
+.checkout button:hover {
+  background-color: #0b66c3;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 600px) {
+  .checkout {
+    margin: 20px 15px;
+    padding: 15px;
+  }
+
+  .checkout form input {
+    font-size: 0.95rem;
+  }
+
+  .checkout ul li {
+    font-size: 0.95rem;
+  }
+
+  .checkout button {
+    font-size: 0.95rem;
+  }
+}

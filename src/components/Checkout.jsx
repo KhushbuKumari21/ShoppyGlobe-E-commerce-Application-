@@ -1,6 +1,7 @@
 import { useSelector, useDispatch } from "react-redux";
 import { clearCart } from "../redux/cartSlice";
 import { useNavigate } from "react-router-dom";
+import "./Checkout.css"; // Import CSS
 
 // Checkout page
 const Checkout = () => {
