@@ -1,6 +1,7 @@
 import ProductItem from "./ProductItem";
 import useFetchProducts from "../hooks/useFetchProducts";
 import { useSelector } from "react-redux";
+import "./ProductList.css"; // CSS for styling
 
 // List of products component
 const ProductList = () => {
