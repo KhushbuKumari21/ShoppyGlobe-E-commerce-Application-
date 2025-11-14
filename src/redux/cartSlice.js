@@ -43,7 +43,13 @@ const cartSlice = createSlice({
     },
   },
 });
+//Selctors
+export const selectCartItems = (state) => state.cart.items;
 
+export const selectCartCount = (state) =>
+  state.cart.items.reduce((total, item) => total + item.quantity, 0);
+
+export const selectSearchQuery = (state) => state.cart.searchQuery;
 // Export actions
 export const {
   addToCart,
