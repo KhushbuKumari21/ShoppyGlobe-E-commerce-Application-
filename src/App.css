@@ -89,3 +89,10 @@ header nav a:hover {
     font-size: 0.9rem;
   }
 }
+
+.loading {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #007bff;
+  margin-top: 50px;
+}
