@@ -1,5 +1,3 @@
-
-
 /* Container for single cart item */
 .cart-item {
   display: flex;
@@ -21,7 +19,7 @@
 /* Image styling */
 .cart-item img {
   width: 80px;
-  height: 80px;
+  height: 100px;
   object-fit: cover;
   border-radius: 8px;
   margin-right: 15px;
@@ -78,7 +76,7 @@
   background-color: #a71d2a;
 }
 
-/* Responsive design */
+/* Responsive design for tablets (≤768px) */
 @media (max-width: 768px) {
   .cart-item {
     flex-direction: column;
@@ -91,5 +89,32 @@
 
   .cart-item div {
     margin-bottom: 10px;
+  }
+}
+
+/* Responsive design for small phones (≤480px) */
+@media (max-width: 480px) {
+  .cart-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .cart-item h3 {
+    font-size: 0.9rem;
+  }
+
+  .cart-item p {
+    font-size: 0.9rem;
+    margin: 0 10px;
+  }
+
+  .cart-item div button {
+    padding: 4px 8px;
+    font-size: 0.85rem;
+  }
+
+  .cart-item > button {
+    padding: 6px 12px;
+    font-size: 0.85rem;
   }
 }
