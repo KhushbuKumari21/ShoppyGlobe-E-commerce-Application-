@@ -1,13 +1,11 @@
-
-
 /* Header container */
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 30px;
-  background-color: #007bff; /* Keep background blue */
-  color: #000; /* Set default text color to black */
+  background-color: #007bff; /* Blue background */
+  color: #fff; /* Header text in white */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   flex-wrap: wrap;
 }
@@ -19,24 +17,40 @@
 
 .header h1 a {
   text-decoration: none;
-  color: #000; /* Title in black */
+  color: #282727; 
   font-weight: bold;
 }
 
 .header nav {
   display: flex;
   gap: 20px;
+  align-items: center;
 }
 
 .header nav a {
   text-decoration: none;
-  color: #000; /* Links in black */
+  color: #0d0d0d; 
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
 .header nav a:hover {
-  color: #ffd700; /* Keep hover color gold */
+  color: #ffd700; /* Gold on hover */
+}
+
+/* Search input styling */
+.header input[type="text"] {
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+  margin-left: 20px;
+  transition: box-shadow 0.3s ease;
+}
+
+.header input[type="text"]:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(255, 215, 0, 0.7);
 }
 
 /* Responsive design */
@@ -54,5 +68,35 @@
 
   .header h1 {
     font-size: 1.5rem;
+    margin-bottom: 10px;
   }
+
+  .header input[type="text"] {
+    width: 100%;
+    margin: 10px 0 0 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .header h1 {
+    font-size: 1.2rem;
+  }
+
+  .header nav {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  /* Search input styling */
+.header input[type="text"] {
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+  margin-left: 20px;
+  transition: box-shadow 0.3s ease;
+  color: #000; /* Text color black */
+}
+
 }

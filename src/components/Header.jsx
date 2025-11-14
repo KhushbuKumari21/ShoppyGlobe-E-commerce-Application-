@@ -1,15 +1,15 @@
 import { Link, Outlet } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { setSearchQuery } from "../redux/cartSlice";
 import "./Header.css"; // Import CSS
 
-// Header component with navigation and cart count
 const Header = () => {
+  const dispatch = useDispatch();
   const cartItems = useSelector((state) => state.cart.items);
+  const searchQuery = useSelector((state) => state.cart.searchQuery);
 
   return (
     <>
-      {/* Navigation links for routing */}
-
       <header className="header">
         <h1>
           <Link to="/">ShoppyGlobe</Link>
@@ -18,9 +18,16 @@ const Header = () => {
           <Link to="/">Home</Link>
           <Link to="/cart">Cart ({cartItems.length})</Link>
         </nav>
+        {/* Search input */}
+        <input
+          type="text"
+          placeholder="Search products..."
+          value={searchQuery}
+          onChange={(e) => dispatch(setSearchQuery(e.target.value))}
+        />
       </header>
 
-      <main>
+      <main className="main-content">
         <Outlet />
       </main>
     </>
