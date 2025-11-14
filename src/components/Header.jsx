@@ -8,6 +8,8 @@ const Header = () => {
 
   return (
     <>
+      {/* Navigation links for routing */}
+
       <header className="header">
         <h1>
           <Link to="/">ShoppyGlobe</Link>
