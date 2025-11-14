@@ -1,27 +1,35 @@
 /* Checkout.css */
 
-/* Container for checkout page */
+/* Main container */
 .checkout {
   max-width: 800px;
   margin: 40px auto;
   padding: 25px;
-  background-color: #fdfdfd;
+  background-color: #ffffff;
   border-radius: 12px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-  font-family: 'Arial', sans-serif;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  font-family: "Arial", sans-serif;
+  transition: transform 0.3s ease;
 }
 
-/* Heading styles */
+/* Smooth hover card effect */
+.checkout:hover {
+  transform: translateY(-3px);
+}
+
+/* Headings */
 .checkout h2 {
   text-align: center;
+  color: #1a1a1a;
+  letter-spacing: 1px;
   margin-bottom: 25px;
-  color: #222;
 }
 
 .checkout h3 {
+  color: #333;
   margin-top: 30px;
   margin-bottom: 15px;
-  color: #444;
+  font-size: 1.2rem;
 }
 
 /* Form styling */
@@ -36,49 +44,58 @@
   padding: 12px 15px;
   font-size: 1rem;
   border: 1px solid #ccc;
-  border-radius: 6px;
-  transition: border-color 0.3s;
+  border-radius: 8px;
+  background: #fafafa;
+  transition: all 0.3s ease;
 }
 
 .checkout form input:focus {
   outline: none;
   border-color: #007bff;
+  box-shadow: 0 0 6px rgba(0, 123, 255, 0.4);
+  background: #fff;
 }
 
 /* Order summary list */
 .checkout ul {
   list-style: none;
   padding: 0;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 .checkout ul li {
   display: flex;
   justify-content: space-between;
-  padding: 10px 0;
+  padding: 12px 5px;
   border-bottom: 1px solid #ddd;
+  font-size: 1rem;
   font-weight: 500;
 }
 
-/* Place order button */
+/* Button styling */
 .checkout button {
   width: 100%;
   padding: 15px;
   font-size: 1.1rem;
   font-weight: bold;
   color: #fff;
-  background-color: #007bff;
+  background: #007bff;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .checkout button:hover {
-  background-color: #0056b3;
+  background: #0056b3;
+  transform: scale(1.02);
 }
 
-/* Responsive design */
+.checkout button:active {
+  transform: scale(0.98);
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
   .checkout {
     margin: 20px;
@@ -87,10 +104,30 @@
 
   .checkout form input {
     font-size: 0.95rem;
+    padding: 10px 12px;
+  }
+
+  .checkout ul li {
+    font-size: 0.95rem;
   }
 
   .checkout button {
     font-size: 1rem;
     padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .checkout {
+    padding: 18px;
+  }
+
+  .checkout h2 {
+    font-size: 1.4rem;
+  }
+
+  .checkout button {
+    padding: 12px;
+    font-size: 0.95rem;
   }
 }
