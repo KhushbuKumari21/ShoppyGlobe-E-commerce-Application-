@@ -1,6 +1,8 @@
 import React, { lazy, Suspense } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Header from "./components/Header";
+import "./App.css";
+
 
 // Lazy load components
 const ProductList = lazy(() => import("./components/ProductList"));
@@ -64,7 +66,7 @@ const router = createBrowserRouter([
       {
         path: "*",
         element: (
-          <Suspense fallback={<p>Loading...</p>}>
+          <Suspense fallback={<div className="loading">Loading...</div>}>
             <NotFound />
           </Suspense>
         ),
