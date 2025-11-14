@@ -3,6 +3,7 @@ import CartItem from "./CartItem";
 import { clearCart } from "../redux/cartSlice";
 import { useNavigate } from "react-router-dom";
 import "./Cart.css";
+import { useState,useEffect } from "react";
 
 
 // Cart page
@@ -10,6 +11,12 @@ const Cart = () => {
   const items = useSelector(state => state.cart.items);
   const dispatch = useDispatch();
   const navigate = useNavigate();
+    // Redirect to Home if cart is empty
+  useEffect(() => {
+    if (items.length === 0) {
+      navigate("/"); // Automatically go to Home
+    }
+  }, [items, navigate]); // <-- Add dependency on items
 
   const handleCheckout = () => {
     navigate("/checkout");
