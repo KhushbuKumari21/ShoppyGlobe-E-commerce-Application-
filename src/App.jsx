@@ -11,13 +11,13 @@ const NotFound = lazy(() => import("./components/NotFound"));
 
 // Loader functions for data fetching
 const fetchProducts = async () => {
-  const res = await fetch("https://fakestoreapi.com/products");
+  const res = await fetch("https://dummyjson.com/products");
   if (!res.ok) throw new Error("Failed to fetch products");
   return res.json();
 };
 
 const fetchProductById = async ({ params }) => {
-  const res = await fetch(`https://fakestoreapi.com/products/${params.id}`);
+  const res = await fetch(`https://dummyjson.com/products/${params.id}`);
   if (!res.ok) throw new Error("Failed to fetch product");
   return res.json();
 };
